@@ -1,2 +1,6 @@
 # Virtual environment
-.env/
+.venv/
+# Python file with token
+config.py
+# Byte-compiled
+__pycache__/
