@@ -1,1 +1,4 @@
-aiogram 3.21.0
+Python 3.10+
+aiogram
+sqlite3 (built-in)
+asyncio
