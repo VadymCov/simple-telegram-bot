@@ -1,5 +1,4 @@
 import asyncio
-import sqlite3
 from aiogram import  Bot, Dispatcher, F
 from aiogram.filters import CommandStart
 from aiogram.types import CallbackQuery, Message, InlineKeyboardMarkup, InlineKeyboardButton
