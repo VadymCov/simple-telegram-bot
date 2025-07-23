@@ -6,7 +6,7 @@ from config import YOUR_TOKEN # Important: config.py is added to .gitignore to p
                             
 
 bot = Bot(token=YOUR_TOKEN) # Initialize the bot using the token from config.py.
-db = Dispatcher()
+dp = Dispatcher()
 
 
     
