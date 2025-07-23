@@ -10,7 +10,7 @@ dp = Dispatcher()
 
 
     
-@db.message(CommandStart())
+@dp.message(CommandStart())
 async def cmd_start(message:Message):
         markup = InlineKeyboardMarkup(
             inline_keyboard=[
@@ -23,24 +23,24 @@ async def cmd_start(message:Message):
         )
         await message.answer(f"Hello", reply_markup=markup)
 
-@db.callback_query(F.data=="btn_one")
+@dp.callback_query(F.data=="btn_one")
 async def handle_btn_one(callback: CallbackQuery):
     await callback.answer()
     await callback.message.answer("Button one")
 
-@db.callback_query(F.data=="btn_two")
+@dp.callback_query(F.data=="btn_two")
 async def handle_btn_two(callback: CallbackQuery):
     await callback.answer()
     await callback.message.answer("Button two")
 
-@db.callback_query(F.data=="btn_three")
+@dp.callback_query(F.data=="btn_three")
 async def handle_btn_three(callback: CallbackQuery):
     await callback.answer()
     await callback.message.answer("Button three")
 
 
 async def main():
-    await db.start_polling(bot) 
+    await dp.start_polling(bot) 
 
 if __name__ == '__main__':
     asyncio.run(main())
